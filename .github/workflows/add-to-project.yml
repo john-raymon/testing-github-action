@@ -5,8 +5,8 @@ on:
 
 jobs:
   add-to-project:
-    name: name: Add new issues to project
     runs-on: ubuntu-latest
+    name: Add new issues to project
     steps:
       - uses: actions/add-to-project@v0.3.0
         with:
