@@ -1,0 +1,16 @@
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  add-to-project:
+    name: name: Add new issues to project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.3.0
+        with:
+          # You can target a repository in a different organization
+          # to the issue
+          project-url: https://github.com/users/john-raymon/projects/1
+          github-token: ${{ secrets.REPO_PROJECT_SCOPE_TOKEN }}
